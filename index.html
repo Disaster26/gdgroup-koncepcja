@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow" data-podglad>
+<title>Deweloper i land development | GIANT Development Group</title>
+<meta name="description" content="GIANT Development Group: zakup gruntów i land development od analizy do pozwolenia na budowę. Inwestycje mieszkaniowe i komercyjne w całej Polsce, współpraca z właścicielami gruntów i inwestorami.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preload" as="image" href="img/hero-1600.webp" imagesrcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2560.webp 2560w" imagesizes="(max-aspect-ratio: 1/1) 178vh, 100vw" fetchpriority="high">
+<link rel="preload" href="fonts/barlow-condensed-latin-700.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/archivo-rdzen.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:BC;src:url(fonts/barlow-condensed-latin-700.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0000-00FF,U+2013-2014,U+2018-201E,U+2022,U+2026}
+@font-face{font-family:BC;src:url(fonts/barlow-condensed-pl-700.woff2) format("woff2");font-weight:700;font-display:swap;unicode-range:U+0100-024F}
+@font-face{font-family:BC;src:url(fonts/barlow-condensed-latin-600.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0000-00FF,U+2013-2014,U+2018-201E,U+2022,U+2026}
+@font-face{font-family:BC;src:url(fonts/barlow-condensed-pl-600.woff2) format("woff2");font-weight:600;font-display:swap;unicode-range:U+0100-024F}
+@font-face{font-family:Archivo;font-weight:400 800;font-display:swap;src:url(fonts/archivo-rdzen.woff2) format("woff2");unicode-range:U+0020-007E,U+00A0,U+00A9,U+00AB,U+00B0,U+00B2,U+00B7,U+00BB,U+00D3,U+00D7,U+00F3,U+2013,U+2018-2019,U+201C-201E,U+2026}
+@font-face{font-family:Archivo;font-weight:400 800;font-display:swap;src:url(fonts/archivo-pl.woff2) format("woff2");unicode-range:U+0104-0107,U+0118-0119,U+0141-0144,U+015A-015B,U+0179-017C}
+:root{--gold:#D4AF37;--gold-d:#8C6E14;--ink:#141518;--graf:#17181B;--grey:#EEF0F2;--line:#D8DBE0;--txt:#3A3D44;--w:1240px;--pad:clamp(16px,4vw,40px)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#fff;color:var(--txt);font:16px/1.6 Archivo,Arial,sans-serif;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:BC,"Arial Narrow",sans-serif;color:var(--ink);font-weight:700;line-height:1.04;margin:0;letter-spacing:.005em}
+h2{font-size:clamp(36px,4.6vw,60px)}
+h3{font-size:24px;font-weight:600}
+p{margin:0 0 1em}
+.wrap{max-width:var(--w);margin:0 auto;padding:0 var(--pad)}
+.skip{position:absolute;left:-999px}
+/* znak szlifu z logo */
+.gem{width:22px;height:20px;flex:none;color:var(--gold)}
+/* przyciski */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:50px;padding:0 24px;font:600 15px/1 Archivo,Arial,sans-serif;text-decoration:none;border:2px solid var(--gold);cursor:pointer;transition:background .2s,color .2s}
+.btn-z{background:var(--gold);color:var(--ink)}
+.btn-z:hover{background:#E2C25A}
+.btn-o{background:transparent;color:#fff;border-color:rgba(255,255,255,.75)}
+.btn-o:hover{background:#fff;color:var(--ink);border-color:#fff}
+.btn-c{background:var(--ink);color:#fff;border-color:var(--ink)}
+.btn-c:hover{background:#2A2C31}
+/* naglowek */
+.top{position:fixed;inset:0 0 auto;z-index:50;color:#fff;transition:background .25s,color .25s,box-shadow .25s}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;max-width:1440px}
+.logo{display:block;width:172px;color:inherit}
+.logo svg{width:100%;height:auto;display:block}
+.nav{display:flex;align-items:center;gap:30px}
+.nav a{text-decoration:none;font-size:15px;font-weight:500;opacity:.92}
+.nav a:hover{opacity:1;color:var(--gold)}
+.nav .tel{font-weight:700;padding-left:26px;border-left:1px solid rgba(255,255,255,.35)}
+.top.s{background:#fff;color:var(--ink);box-shadow:0 1px 0 var(--line)}
+.top.s .nav .tel{border-color:var(--line)}
+.burger{display:none;width:46px;height:46px;border:0;background:none;color:inherit;padding:11px;cursor:pointer}
+.burger span{display:block;height:2px;background:currentColor;margin:6px 0;transition:transform .2s,opacity .2s}
+/* pierwszy ekran */
+.hero{position:relative;min-height:100vh;min-height:100svh;display:flex;align-items:flex-end;color:#fff;background:#24262A;clip-path:polygon(0 0,100% 0,100% calc(100% - 34px),50% 100%,0 calc(100% - 34px))}
+.hero img{position:absolute;inset:0;z-index:0;width:100%;height:100%;object-fit:cover;object-position:62% 40%}
+.hero::before{content:"";position:absolute;inset:0;z-index:1;background:linear-gradient(90deg,rgba(12,13,15,.8) 0%,rgba(12,13,15,.55) 42%,rgba(12,13,15,.08) 74%),linear-gradient(180deg,rgba(12,13,15,.5) 0,rgba(12,13,15,0) 150px),linear-gradient(0deg,rgba(12,13,15,.5),rgba(12,13,15,0) 40%)}
+.hero .wrap{position:relative;z-index:2;width:100%;max-width:1440px;padding-top:110px;padding-bottom:clamp(76px,11vh,128px)}
+.hero h1{color:#fff;font-size:clamp(40px,5.2vw,80px);max-width:820px}
+.hero .lead{font-size:clamp(16px,1.35vw,19px);max-width:600px;margin:22px 0 30px;color:#E9EAEC}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px}
+.hero .kontakt{margin-top:22px;font-size:15px;color:#D5D7DB}
+.hero .kontakt a{color:#fff;font-weight:700;text-decoration:none;white-space:nowrap}
+/* proces */
+.proces{padding:clamp(72px,9vw,120px) 0 clamp(64px,8vw,104px)}
+.proces .gora{display:grid;grid-template-columns:1fr 1fr;gap:40px 80px;align-items:end}
+.proces .gora p{font-size:18px;max-width:560px;margin:0}
+.kroki{list-style:none;margin:56px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);position:relative}
+.kroki::before{content:"";position:absolute;left:11px;right:11px;top:10px;height:1px;background:var(--gold)}
+.kroki li{position:relative;padding-right:28px}
+.kroki .gem{background:#fff;position:relative;margin-bottom:22px;box-shadow:0 0 0 8px #fff}
+.kroki b{display:block;font:700 23px/1.1 BC,sans-serif;color:var(--ink);margin-bottom:8px}
+.kroki span{font-size:15px}
+.kroki li:last-child b{color:var(--gold-d)}
+/* inwestycje */
+.inw{background:var(--graf);color:#C9CBD0;padding:clamp(80px,10vw,132px) 0 clamp(72px,9vw,112px);clip-path:polygon(0 0,50% 34px,100% 0,100% 100%,0 100%)}
+.inw h2{color:#fff}
+.inw .gora{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;margin-bottom:40px}
+.inw .gora p{max-width:520px;margin:14px 0 0}
+.strz{display:flex;gap:10px}
+.strz button{width:52px;height:52px;border:1px solid rgba(255,255,255,.3);background:none;color:#fff;cursor:pointer;font-size:22px;line-height:1}
+.strz button:hover{border-color:var(--gold);color:var(--gold)}
+.tor{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:0 var(--pad);scroll-padding:0 var(--pad);cursor:grab;max-width:1440px;margin:0 auto}
+.tor::-webkit-scrollbar{display:none}
+.tor.drag{cursor:grabbing;scroll-snap-type:none}
+.tor.drag *{pointer-events:none}
+.karta{flex:0 0 clamp(270px,30vw,410px);scroll-snap-align:start;color:#C9CBD0}
+.karta .fot{aspect-ratio:4/3;overflow:hidden;background:#24262A}
+.karta img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.karta:hover img{transform:scale(1.03)}
+.karta .opis{padding:20px 2px 0;border-top:2px solid var(--gold);margin-top:-2px;position:relative}
+.karta small{display:block;font-size:14px;color:var(--gold);margin-bottom:6px}
+.karta h3{color:#fff;font-size:27px;margin-bottom:10px}
+.karta p{font-size:15px;margin:0}
+/* Bytom */
+.bytom{padding:clamp(80px,10vw,128px) 0}
+.bytom .uklad{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,1fr);gap:clamp(32px,5vw,72px);align-items:start}
+.galeria{position:relative}
+.galeria .tor2{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;cursor:grab}
+.galeria .tor2::-webkit-scrollbar{display:none}
+.galeria .tor2.drag{cursor:grabbing;scroll-snap-type:none}
+.galeria .tor2.drag *{pointer-events:none}
+.galeria figure{flex:0 0 100%;margin:0;scroll-snap-align:start;aspect-ratio:3/2;background:var(--grey)}
+.galeria figure img{width:100%;height:100%;object-fit:cover}
+.galeria .pasek{display:flex;justify-content:space-between;align-items:center;margin-top:14px;font-size:14px}
+.galeria .kropki{display:flex;gap:8px}
+.galeria .kropki button{width:26px;height:26px;padding:0;border:0;background:none;cursor:pointer;display:grid;place-items:center}
+.galeria .kropki button::after{content:"";width:10px;height:10px;transform:rotate(45deg);border:1.5px solid var(--ink)}
+.galeria .kropki button[aria-current=true]::after{background:var(--gold);border-color:var(--gold)}
+.bytom h2{margin-bottom:18px}
+.bytom .wstep{font-size:18px;color:var(--ink)}
+.dane{margin:28px 0 30px;border-top:1px solid var(--line)}
+.dane div{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid var(--line);font-size:15px}
+.dane dt{color:#6A6E76}
+.dane dd{margin:0;color:var(--ink);font-weight:600;text-align:right}
+/* pas zdjecia */
+.pas{position:relative;height:clamp(260px,46vw,620px);overflow:hidden;background:#2A2C30}
+.pas img{width:100%;height:100%;object-fit:cover;object-position:50% 60%}
+.pas p{position:absolute;left:0;right:0;bottom:0;margin:0;padding:18px var(--pad);color:#fff;font-size:14px;background:linear-gradient(0deg,rgba(0,0,0,.55),rgba(0,0,0,0));max-width:none}
+/* grunty */
+.grunty{background:var(--grey);display:grid;grid-template-columns:1fr 1fr;align-items:stretch}
+.grunty .tekst{padding:clamp(72px,9vw,120px) clamp(24px,5vw,80px) clamp(72px,9vw,120px) max(var(--pad),calc((100vw - var(--w))/2 + var(--pad)))}
+.grunty .fot{position:relative;min-height:420px}
+.grunty .fot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.grunty h2{margin-bottom:22px}
+.grunty .wstep{font-size:18px;color:var(--ink)}
+.dwie{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin:32px 0 36px}
+.dwie h3{font-size:21px;margin-bottom:12px}
+.lista{list-style:none;margin:0;padding:0}
+.lista li{display:flex;gap:12px;align-items:flex-start;padding:6px 0;font-size:15px;line-height:1.45}
+.lista .gem{width:14px;height:13px;margin-top:4px}
+/* inwestorzy */
+.inwestorzy{padding:clamp(80px,10vw,128px) 0}
+.inwestorzy .uklad{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:clamp(36px,6vw,96px)}
+.inwestorzy .wstep{font-size:18px;color:var(--ink);margin-top:22px}
+.cytat{margin:34px 0 0;padding:26px 0 0;border-top:2px solid var(--gold);font:600 clamp(24px,2.3vw,31px)/1.2 BC,sans-serif;color:var(--ink)}
+.cytat cite{display:block;margin-top:12px;font:400 14px/1.4 Archivo,sans-serif;color:#6A6E76;font-style:normal}
+.blok{padding:26px 0;border-bottom:1px solid var(--line)}
+.blok:first-child{padding-top:6px}
+.blok h3{margin-bottom:12px}
+.blok p{margin:0;font-size:15px}
+.firma{background:var(--grey);padding:clamp(56px,7vw,88px) 0}
+.firma .uklad{display:grid;grid-template-columns:1.2fr 1fr 1fr;gap:clamp(28px,4vw,64px)}
+.firma h2{font-size:clamp(30px,3.4vw,44px);margin-bottom:16px}
+.firma h3{font-size:21px;margin-bottom:8px}
+.firma p{font-size:15px}
+/* kontakt */
+.kontakt-s{padding:clamp(80px,10vw,128px) 0}
+.kontakt-s .uklad{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(36px,6vw,88px)}
+.kontakt-s h2{margin-bottom:16px}
+.kontakt-s .wstep{font-size:18px;color:var(--ink);margin-bottom:30px}
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .pelne{grid-column:1/-1}
+label{display:block;font-size:14px;font-weight:600;color:var(--ink);margin-bottom:6px}
+input,select,textarea{width:100%;font:16px/1.4 Archivo,Arial,sans-serif;color:var(--ink);background:#fff;border:1px solid #BFC3CA;border-radius:0;padding:13px 14px}
+textarea{min-height:130px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:0;border-color:var(--gold)}
+.uwaga{grid-column:1/-1;font-size:14px;color:#6A6E76;margin:0}
+.dane-k{font-size:16px}
+.dane-k h3{margin:0 0 8px;font-size:22px}
+.dane-k .rz{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.dane-k .rz:first-of-type{border-top:1px solid var(--line)}
+.dane-k a{font-weight:700;color:var(--ink);text-decoration:none}
+.dane-k a:hover{color:var(--gold-d)}
+.dane-k .rz .gem{margin-top:3px}
+.mapa{margin-top:24px;aspect-ratio:16/10;background:var(--grey)}
+.mapa-zg{height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:20px;font-size:15px}
+.mapa-zg p{margin:0;max-width:320px}
+.mapa iframe{width:100%;height:100%;border:0;display:block}
+/* stopka */
+.stopka{background:var(--graf);color:#A9ACB3;padding:64px 0 30px;font-size:14px}
+.stopka .uklad{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:32px}
+.stopka .logo{width:190px;color:#fff;margin-bottom:18px}
+.stopka h3{color:#fff;font-size:19px;margin-bottom:10px}
+.stopka a{text-decoration:none}
+.stopka a:hover{color:var(--gold)}
+.stopka ul{list-style:none;margin:0;padding:0;line-height:2}
+.stopka .dol{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-top:48px;padding-top:22px;border-top:1px solid rgba(255,255,255,.12)}
+/* telefon */
+@media (max-width:1080px){
+ .nav{position:fixed;inset:68px 0 auto;background:#fff;color:var(--ink);flex-direction:column;align-items:stretch;gap:0;padding:8px var(--pad) 22px;box-shadow:0 12px 24px rgba(0,0,0,.12);display:none}
+ .nav a{padding:15px 0;border-bottom:1px solid var(--line);font-size:17px}
+ .nav .tel{border:0;padding-left:0;color:var(--gold-d)}
+ .top.otw .nav{display:flex}
+ .top.otw{background:#fff;color:var(--ink)}
+ .top .wrap{height:68px}
+ .burger{display:block}
+ .top.otw .burger span:nth-child(1){transform:translateY(8px) rotate(45deg)}
+ .top.otw .burger span:nth-child(2){opacity:0}
+ .top.otw .burger span:nth-child(3){transform:translateY(-8px) rotate(-45deg)}
+ .proces .gora,.bytom .uklad,.inwestorzy .uklad,.kontakt-s .uklad{grid-template-columns:1fr}
+ .kroki{grid-template-columns:1fr 1fr;gap:34px 0}
+ .kroki::before{display:none}
+ .grunty{grid-template-columns:1fr}
+ .grunty .tekst{padding:72px var(--pad)}
+ .grunty .fot{min-height:0;aspect-ratio:16/10}
+ .firma .uklad{grid-template-columns:1fr 1fr}
+ .firma .uklad>div:first-child{grid-column:1/-1}
+ .stopka .uklad{grid-template-columns:1fr 1fr}
+ .stopka .uklad>div:first-child{grid-column:1/-1}
+}
+@media (max-width:640px){
+ .logo{width:138px}
+ .hero{clip-path:polygon(0 0,100% 0,100% calc(100% - 18px),50% 100%,0 calc(100% - 18px))}
+ .hero img{object-position:58% 50%}
+ .hero::before{background:linear-gradient(0deg,rgba(12,13,15,.86) 0%,rgba(12,13,15,.62) 48%,rgba(12,13,15,.2) 78%,rgba(12,13,15,.35) 100%)}
+ .hero .wrap{padding-top:92px;padding-bottom:48px}
+ .hero h1{font-size:clamp(34px,10vw,44px)}
+ .hero .lead{font-size:15.5px;line-height:1.5;margin:16px 0 26px}
+ .hero .cta{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+ .hero .btn{padding:0 10px;font-size:14.5px;min-height:50px}
+ .hero .kontakt{margin-top:16px;font-size:14.5px}
+ .inw{clip-path:polygon(0 0,50% 18px,100% 0,100% 100%,0 100%)}
+ .strz{display:none}
+ .kroki{grid-template-columns:1fr;gap:26px}
+ .kroki li{display:grid;grid-template-columns:22px 1fr;column-gap:18px;padding:0}
+ .kroki .gem{margin:3px 0 0;grid-row:span 2}
+ .dwie{grid-template-columns:1fr;gap:22px}
+ form{grid-template-columns:1fr}
+ .firma .uklad{grid-template-columns:1fr}
+ .karta{flex-basis:84%}
+ .karta h3{font-size:25px}
+}
+@media (max-height:700px) and (max-width:640px){
+ .hero .wrap{padding-top:84px;padding-bottom:40px}
+ .hero h1{font-size:34px}
+ .hero .lead{margin:12px 0 24px;font-size:15px}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+<style>
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+</style>
+</head>
+<body>
+<a class="skip" href="#tresc">Przejdź do treści</a>
+<header class="top" id="top">
+ <div class="wrap">
+  <a class="logo" href="#" aria-label="GIANT Development Group, strona główna"><svg aria-hidden="true" focusable="false"  viewBox="0 0 660 168" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"> <g transform="matrix(1,0,0,1,-260.601,-506.671)"> <g transform="matrix(1.14919,0,0,1.14919,-145.753,-21.7639)"> <g transform="matrix(0.0835863,0,0,0.0835863,269.907,344.711)"> <path d="M2208.61,2279.46L2208.61,3123.24L2054.52,2969.18L1930.56,2845.21L1802.62,2717.25L1787.69,2702.33L1659.74,2574.38L1001.28,1915.93L1295.23,1621.99L1302.66,1614.55L1423.18,1494.05L1551.14,1621.99L1423.18,1749.95L1257.19,1915.93L2054.52,2713.26L2054.52,2381.29L1848.93,2175.7L1766.07,2258.56L1657.13,2149.62L1739.99,2066.75L1867.95,1938.8L1976.89,2047.74L2102.53,2173.39L2208.61,2279.46ZM2987.06,1378.35L3035.27,1426.57L2902.53,1559.32L2375.63,2086.23L2332.37,2129.48L2247.67,2214.19L1920.13,1886.63L1592.81,1559.32L1461.27,1427.78L1510.68,1378.35L2987.06,1378.35ZM2247.67,1958.27L2646.62,1559.32L1848.72,1559.32L2048.08,1758.68L2157.02,1867.62L2247.67,1958.27ZM3500.51,1911.88L3332.24,2080.15L3076.33,2080.15L3244.61,1911.88L3081.3,1748.58L2549.6,2280.28L2448.24,2381.64L2448.24,2708.24L2573.91,2582.56L2584.96,2571.53L2712.9,2443.58L2775.77,2380.72L2693.93,2298.88L2802.88,2189.94L3012.67,2399.73L2840.86,2571.53L2712.9,2699.49L2701.88,2710.52L2448.24,2964.15L2294.18,3118.22L2294.18,2279.83L2393.32,2180.68L2953.36,1620.64L3081.3,1492.68L3209.26,1620.64L3500.51,1911.88Z" style="fill:#D4AF37;"/> </g> <g transform="matrix(0.884212,0,0,0.884212,30.06,-326.452)"> <g transform="matrix(50,0,0,50,640.237,930.2)"> <path d="M0.264,0.011C0.187,0.011 0.132,-0.013 0.099,-0.061C0.065,-0.108 0.048,-0.177 0.048,-0.267L0.048,-0.539C0.048,-0.632 0.065,-0.702 0.1,-0.749C0.135,-0.796 0.194,-0.819 0.279,-0.819C0.359,-0.819 0.416,-0.799 0.451,-0.76C0.486,-0.72 0.503,-0.661 0.503,-0.583L0.503,-0.541L0.362,-0.541L0.362,-0.587C0.362,-0.616 0.36,-0.64 0.357,-0.657C0.353,-0.674 0.345,-0.688 0.334,-0.697C0.322,-0.706 0.304,-0.711 0.281,-0.711C0.256,-0.711 0.238,-0.705 0.226,-0.693C0.214,-0.681 0.206,-0.666 0.203,-0.647C0.199,-0.628 0.197,-0.604 0.197,-0.574L0.197,-0.235C0.197,-0.189 0.203,-0.155 0.216,-0.132C0.228,-0.109 0.251,-0.098 0.285,-0.098C0.318,-0.098 0.341,-0.11 0.355,-0.134C0.368,-0.158 0.374,-0.194 0.374,-0.242L0.374,-0.318L0.287,-0.318L0.287,-0.411L0.507,-0.411L0.507,-0L0.411,-0L0.401,-0.079C0.376,-0.019 0.33,0.011 0.264,0.011Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,678.187,930.2)"> <rect x="0.065" y="-0.81" width="0.146" height="0.81" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,701.937,930.2)"> <path d="M0.182,-0.81L0.34,-0.81L0.502,-0L0.365,-0L0.333,-0.187L0.192,-0.187L0.159,-0L0.02,-0L0.182,-0.81ZM0.317,-0.281L0.262,-0.621L0.207,-0.281L0.317,-0.281Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,738.037,930.2)"> <path d="M0.061,-0.81L0.164,-0.81L0.361,-0.348L0.361,-0.81L0.483,-0.81L0.483,-0L0.385,-0L0.187,-0.484L0.187,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,775.287,930.2)"> <path d="M0.142,-0.701L0.013,-0.701L0.013,-0.81L0.416,-0.81L0.416,-0.701L0.29,-0.701L0.29,-0L0.142,-0L0.142,-0.701Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,640.237,991.999)"> <path d="M0.061,-0.81L0.252,-0.81C0.317,-0.81 0.369,-0.801 0.406,-0.784C0.443,-0.766 0.47,-0.739 0.486,-0.703C0.501,-0.666 0.509,-0.618 0.509,-0.558L0.509,-0.263C0.509,-0.202 0.501,-0.152 0.486,-0.114C0.47,-0.076 0.444,-0.048 0.407,-0.029C0.37,-0.01 0.321,-0 0.258,-0L0.061,-0L0.061,-0.81ZM0.254,-0.103C0.287,-0.103 0.31,-0.109 0.325,-0.12C0.34,-0.131 0.349,-0.147 0.353,-0.168C0.357,-0.188 0.359,-0.218 0.359,-0.258L0.359,-0.568C0.359,-0.604 0.357,-0.631 0.352,-0.65C0.347,-0.669 0.338,-0.683 0.323,-0.692C0.308,-0.7 0.284,-0.705 0.252,-0.705L0.208,-0.705L0.208,-0.103L0.254,-0.103Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,678.087,991.999)"> <path d="M0.061,-0.81L0.401,-0.81L0.401,-0.706L0.208,-0.706L0.208,-0.473L0.36,-0.473L0.36,-0.37L0.208,-0.37L0.208,-0.101L0.403,-0.101L0.403,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,709.487,991.999)"> <path d="M0.023,-0.81L0.153,-0.81L0.26,-0.237L0.361,-0.81L0.494,-0.81L0.331,-0L0.186,-0L0.023,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,745.287,991.999)"> <path d="M0.061,-0.81L0.401,-0.81L0.401,-0.706L0.208,-0.706L0.208,-0.473L0.36,-0.473L0.36,-0.37L0.208,-0.37L0.208,-0.101L0.403,-0.101L0.403,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,776.687,991.999)"> <path d="M0.061,-0.81L0.208,-0.81L0.208,-0.101L0.405,-0.101L0.405,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,807.237,991.999)"> <path d="M0.282,0.011C0.198,0.011 0.138,-0.012 0.102,-0.057C0.066,-0.101 0.048,-0.167 0.048,-0.254L0.048,-0.558C0.048,-0.644 0.066,-0.709 0.102,-0.753C0.138,-0.797 0.198,-0.819 0.282,-0.819C0.365,-0.819 0.425,-0.797 0.461,-0.753C0.497,-0.709 0.515,-0.644 0.515,-0.558L0.515,-0.254C0.515,-0.168 0.497,-0.102 0.461,-0.057C0.424,-0.012 0.365,0.011 0.282,0.011ZM0.282,-0.098C0.315,-0.098 0.337,-0.108 0.348,-0.129C0.359,-0.15 0.365,-0.18 0.365,-0.219L0.365,-0.592C0.365,-0.631 0.36,-0.661 0.349,-0.681C0.338,-0.701 0.315,-0.711 0.282,-0.711C0.249,-0.711 0.226,-0.701 0.215,-0.681C0.204,-0.66 0.198,-0.631 0.198,-0.592L0.198,-0.219C0.198,-0.18 0.204,-0.15 0.215,-0.129C0.226,-0.108 0.249,-0.098 0.282,-0.098Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,845.387,991.999)"> <path d="M0.061,-0.81L0.299,-0.81C0.437,-0.81 0.506,-0.733 0.506,-0.58C0.506,-0.433 0.434,-0.36 0.289,-0.36L0.208,-0.36L0.208,-0L0.061,-0L0.061,-0.81ZM0.265,-0.464C0.305,-0.464 0.332,-0.472 0.346,-0.49C0.36,-0.507 0.367,-0.537 0.367,-0.581C0.367,-0.613 0.365,-0.638 0.36,-0.655C0.355,-0.672 0.346,-0.684 0.332,-0.693C0.317,-0.702 0.295,-0.706 0.265,-0.706L0.208,-0.706L0.208,-0.464L0.265,-0.464Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,881.737,991.999)"> <path d="M0.073,-0.81L0.226,-0.81L0.341,-0.249L0.46,-0.81L0.609,-0.81L0.624,-0L0.514,-0L0.502,-0.563L0.387,-0L0.298,-0L0.181,-0.565L0.17,-0L0.059,-0L0.073,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,925.887,991.999)"> <path d="M0.061,-0.81L0.401,-0.81L0.401,-0.706L0.208,-0.706L0.208,-0.473L0.36,-0.473L0.36,-0.37L0.208,-0.37L0.208,-0.101L0.403,-0.101L0.403,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,957.287,991.999)"> <path d="M0.061,-0.81L0.164,-0.81L0.361,-0.348L0.361,-0.81L0.483,-0.81L0.483,-0L0.385,-0L0.187,-0.484L0.187,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,994.537,991.999)"> <path d="M0.142,-0.701L0.013,-0.701L0.013,-0.81L0.416,-0.81L0.416,-0.701L0.29,-0.701L0.29,-0L0.142,-0L0.142,-0.701Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,640.237,1053.8)"> <path d="M0.264,0.011C0.187,0.011 0.132,-0.013 0.099,-0.061C0.065,-0.108 0.048,-0.177 0.048,-0.267L0.048,-0.539C0.048,-0.632 0.065,-0.702 0.1,-0.749C0.135,-0.796 0.194,-0.819 0.279,-0.819C0.359,-0.819 0.416,-0.799 0.451,-0.76C0.486,-0.72 0.503,-0.661 0.503,-0.583L0.503,-0.541L0.362,-0.541L0.362,-0.587C0.362,-0.616 0.36,-0.64 0.357,-0.657C0.353,-0.674 0.345,-0.688 0.334,-0.697C0.322,-0.706 0.304,-0.711 0.281,-0.711C0.256,-0.711 0.238,-0.705 0.226,-0.693C0.214,-0.681 0.206,-0.666 0.203,-0.647C0.199,-0.628 0.197,-0.604 0.197,-0.574L0.197,-0.235C0.197,-0.189 0.203,-0.155 0.216,-0.132C0.228,-0.109 0.251,-0.098 0.285,-0.098C0.318,-0.098 0.341,-0.11 0.355,-0.134C0.368,-0.158 0.374,-0.194 0.374,-0.242L0.374,-0.318L0.287,-0.318L0.287,-0.411L0.507,-0.411L0.507,-0L0.411,-0L0.401,-0.079C0.376,-0.019 0.33,0.011 0.264,0.011Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,678.187,1053.8)"> <path d="M0.061,-0.81L0.256,-0.81C0.341,-0.81 0.405,-0.794 0.447,-0.762C0.489,-0.729 0.51,-0.674 0.51,-0.595C0.51,-0.544 0.503,-0.502 0.488,-0.47C0.472,-0.437 0.447,-0.414 0.41,-0.399L0.523,-0L0.375,-0L0.278,-0.371L0.208,-0.371L0.208,-0L0.061,-0L0.061,-0.81ZM0.255,-0.463C0.297,-0.463 0.327,-0.473 0.345,-0.492C0.362,-0.511 0.371,-0.543 0.371,-0.587C0.371,-0.63 0.363,-0.661 0.348,-0.68C0.332,-0.699 0.304,-0.709 0.263,-0.709L0.208,-0.709L0.208,-0.463L0.255,-0.463Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,716.037,1053.8)"> <path d="M0.282,0.011C0.198,0.011 0.138,-0.012 0.102,-0.057C0.066,-0.101 0.048,-0.167 0.048,-0.254L0.048,-0.558C0.048,-0.644 0.066,-0.709 0.102,-0.753C0.138,-0.797 0.198,-0.819 0.282,-0.819C0.365,-0.819 0.425,-0.797 0.461,-0.753C0.497,-0.709 0.515,-0.644 0.515,-0.558L0.515,-0.254C0.515,-0.168 0.497,-0.102 0.461,-0.057C0.424,-0.012 0.365,0.011 0.282,0.011ZM0.282,-0.098C0.315,-0.098 0.337,-0.108 0.348,-0.129C0.359,-0.15 0.365,-0.18 0.365,-0.219L0.365,-0.592C0.365,-0.631 0.36,-0.661 0.349,-0.681C0.338,-0.701 0.315,-0.711 0.282,-0.711C0.249,-0.711 0.226,-0.701 0.215,-0.681C0.204,-0.66 0.198,-0.631 0.198,-0.592L0.198,-0.219C0.198,-0.18 0.204,-0.15 0.215,-0.129C0.226,-0.108 0.249,-0.098 0.282,-0.098Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,754.187,1053.8)"> <path d="M0.283,0.011C0.224,0.011 0.178,0 0.145,-0.021C0.112,-0.042 0.088,-0.073 0.075,-0.112C0.062,-0.151 0.055,-0.201 0.055,-0.262L0.055,-0.81L0.199,-0.81L0.199,-0.245C0.199,-0.198 0.205,-0.162 0.216,-0.137C0.227,-0.112 0.249,-0.099 0.283,-0.099C0.318,-0.099 0.341,-0.112 0.352,-0.137C0.363,-0.162 0.368,-0.198 0.368,-0.245L0.368,-0.81L0.511,-0.81L0.511,-0.262C0.511,-0.202 0.504,-0.152 0.491,-0.113C0.478,-0.073 0.454,-0.042 0.421,-0.021C0.388,0 0.342,0.011 0.283,0.011Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,792.487,1053.8)"> <path d="M0.061,-0.81L0.299,-0.81C0.437,-0.81 0.506,-0.733 0.506,-0.58C0.506,-0.433 0.434,-0.36 0.289,-0.36L0.208,-0.36L0.208,-0L0.061,-0L0.061,-0.81ZM0.265,-0.464C0.305,-0.464 0.332,-0.472 0.346,-0.49C0.36,-0.507 0.367,-0.537 0.367,-0.581C0.367,-0.613 0.365,-0.638 0.36,-0.655C0.355,-0.672 0.346,-0.684 0.332,-0.693C0.317,-0.702 0.295,-0.706 0.265,-0.706L0.208,-0.706L0.208,-0.464L0.265,-0.464Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> </g> </g> </g> </svg></a>
+  <button class="burger" aria-label="Menu" aria-expanded="false" aria-controls="nav"><span></span><span></span><span></span></button>
+  <nav class="nav" id="nav">
+   <a href="#inwestycje">Inwestycje</a>
+   <a href="#grunty">Grunty</a>
+   <a href="#inwestorzy">Inwestorzy</a>
+   <a href="#o-nas">O nas</a>
+   <a href="#kontakt">Kontakt</a>
+   <a class="tel" href="tel:+48532551913">+48 532 551 913</a>
+  </nav>
+ </div>
+</header>
+
+<main id="tresc">
+<section class="hero">
+ <img src="img/hero-1600.webp" srcset="img/hero-640.webp 640w, img/hero-1024.webp 1024w, img/hero-1600.webp 1600w, img/hero-2560.webp 2560w" sizes="(max-aspect-ratio: 1/1) 178vh, 100vw" width="2560" height="1440" alt="Wizualizacja inwestycji Łódź Wólczańska Apartments, narożny budynek z elewacją z blachy kortenowej" fetchpriority="high">
+ <div class="wrap">
+  <h1>Deweloper i land development. Grunt przygotowany do budowy</h1>
+  <p class="lead">Kupujemy grunty i prowadzimy je od analizy do pozwolenia na budowę. Działamy na własnym kapitale, także off-market i we wspólnych przedsięwzięciach z właścicielami gruntów oraz inwestorami.</p>
+  <div class="cta">
+   <a class="btn btn-z" href="#kontakt">Zaproponuj grunt</a>
+   <a class="btn btn-o" href="#inwestorzy">Dla inwestorów</a>
+  </div>
+  <p class="kontakt">Pabianice i Warszawa, projekty w całej Polsce · <a href="tel:+48532551913">+48 532 551 913</a></p>
+ </div>
+</section>
+
+<section class="proces" aria-labelledby="h-proces">
+ <div class="wrap">
+  <div class="gora">
+   <h2 id="h-proces">Od surowego gruntu do pozwolenia na budowę</h2>
+   <p>Diament w naszym znaku nie jest przypadkowy. Grunt jest surowcem, a wartość powstaje przy jego obróbce: w analizach, koncepcji i decyzjach. Każdy etap bierzemy na siebie, aż projekt jest gotowy do realizacji, finansowania, budowy lub sprzedaży inwestorskiej.</p>
+  </div>
+  <ol class="kroki">
+   <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M1 7.5h22M9 1 7.5 7.5 12 21l4.5-13.5L15 1" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg><b>Analizy</b><span>prawne, planistyczne i środowiskowe</span></li>
+   <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M1 7.5h22M9 1 7.5 7.5 12 21l4.5-13.5L15 1" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg><b>Koncepcja</b><span>urbanistyczna i architektoniczna</span></li>
+   <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M1 7.5h22M9 1 7.5 7.5 12 21l4.5-13.5L15 1" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg><b>Decyzje</b><span>procedury administracyjne, uchwały i pozwolenia</span></li>
+   <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M1 7.5h22M9 1 7.5 7.5 12 21l4.5-13.5L15 1" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg><b>Projekt gotowy do PnB</b><span>teren przygotowany do realizacji</span></li>
+  </ol>
+ </div>
+</section>
+
+<section class="inw" id="inwestycje" aria-labelledby="h-inw">
+ <div class="wrap gora">
+  <div>
+   <h2 id="h-inw">Nasze inwestycje</h2>
+   <p>Wybrane projekty zrealizowane i przygotowywane: od kameralnych budynków w centrum Łodzi po osiedle na 808 mieszkań.</p>
+  </div>
+  <div class="strz"><button type="button" data-kier="-1" aria-label="Poprzednie inwestycje">&#8592;</button><button type="button" data-kier="1" aria-label="Następne inwestycje">&#8594;</button></div>
+ </div>
+ <div class="tor" id="tor">
+  <article class="karta"><div class="fot"><img src="img/bytom-640.webp" srcset="img/bytom-640.webp 640w, img/bytom-1200.webp 1200w" sizes="(max-width:640px) 84vw, 410px" width="1200" height="797" loading="lazy" alt="Bytom Premium Residence, wizualizacja wieczorna"></div><div class="opis"><small>Bytom, ul. Łużycka</small><h3>Bytom Premium Residence</h3><p>339 mieszkań, dwa budynki po 17 kondygnacji. PUM ok. 18 000 m², pozwolenie na budowę 2026.</p></div></article>
+  <article class="karta"><div class="fot"><img src="img/dabrowa-640.webp" srcset="img/dabrowa-640.webp 640w, img/dabrowa-1200.webp 1200w" sizes="(max-width:640px) 84vw, 410px" width="1200" height="709" loading="lazy" alt="Apartamenty Dąbrowa Górnicza, kwartał A przy dworcu"></div><div class="opis"><small>Dąbrowa Górnicza, Ząbkowice</small><h3>Apartamenty Dąbrowa Górnicza</h3><p>808 mieszkań w czterech etapach na terenie dawnej huty szkła, z zachowanymi kominami.</p></div></article>
+  <article class="karta"><div class="fot"><img src="img/wolczanska-640.webp" srcset="img/wolczanska-640.webp 640w, img/wolczanska-1200.webp 1200w" sizes="(max-width:640px) 84vw, 410px" width="1200" height="675" loading="lazy" alt="Łódź Wólczańska Apartments, budynek B"></div><div class="opis"><small>Łódź, ul. Wólczańska</small><h3>Łódź Wólczańska Apartments</h3><p>156 mieszkań w centrum Łodzi, równolegle do Piotrkowskiej. PUM 7 000 m².</p></div></article>
+  <article class="karta"><div class="fot"><img src="img/lipowa-640.webp" srcset="img/lipowa-640.webp 640w, img/lipowa-1200.webp 1200w" sizes="(max-width:640px) 84vw, 410px" width="1200" height="675" loading="lazy" alt="Łódź Lipowa Apartamenty, elewacja od ulicy"></div><div class="opis"><small>Łódź, Stare Polesie</small><h3>Łódź Lipowa Apartamenty</h3><p>65 mieszkań, usługi w parterze i taras rekreacyjny na dachu. PUM 2 969 m².</p></div></article>
+  <article class="karta"><div class="fot"><img src="img/stasinek-640.webp" srcset="img/stasinek-640.webp 640w, img/stasinek-1200.webp 1200w" sizes="(max-width:640px) 84vw, 410px" width="1200" height="720" loading="lazy" alt="Warszawa Stasinek Residence, domy w zabudowie bliźniaczej"></div><div class="opis"><small>Warszawa, Wawer</small><h3>Stasinek Residence</h3><p>12 domów w zabudowie bliźniaczej przy Mazowieckim Parku Krajobrazowym. Zbudowane i zamieszkałe.</p></div></article>
+  <article class="karta"><div class="fot"><img src="img/ksawerow-640.webp" srcset="img/ksawerow-640.webp 640w, img/ksawerow-1200.webp 1200w" sizes="(max-width:640px) 84vw, 410px" width="1200" height="675" loading="lazy" alt="Ksawerów, budynek biurowo-laboratoryjny z halą"></div><div class="opis"><small>Ksawerów k. Łodzi</small><h3>Ksawerów</h3><p>Budynek biurowo-laboratoryjny z halą produkcyjno-magazynową w Łódzkiej Strefie Ekonomicznej.</p></div></article>
+ </div>
+</section>
+
+<section class="bytom" aria-labelledby="h-bytom">
+ <div class="wrap uklad">
+  <div class="galeria" id="gal">
+   <div class="tor2">
+    <figure><img src="img/bytom-1-640.webp" srcset="img/bytom-1-640.webp 640w, img/bytom-1-1200.webp 1200w" sizes="(max-width:1080px) 100vw, 700px" width="1200" height="797" loading="lazy" alt="Bytom Premium Residence, widok dzienny od strony parku"></figure>
+    <figure><img src="img/bytom-2-640.webp" srcset="img/bytom-2-640.webp 640w, img/bytom-2-1200.webp 1200w" sizes="(max-width:1080px) 100vw, 700px" width="1200" height="798" loading="lazy" alt="Bytom Premium Residence, widok nocny"></figure>
+    <figure><img src="img/bytom-3-640.webp" srcset="img/bytom-3-640.webp 640w, img/bytom-3-1200.webp 1200w" sizes="(max-width:1080px) 100vw, 700px" width="1200" height="675" loading="lazy" alt="Bytom Premium Residence, widok od strony szkoły"></figure>
+    <figure><img src="img/bytom-4-640.webp" srcset="img/bytom-4-640.webp 640w, img/bytom-4-1200.webp 1200w" sizes="(max-width:1080px) 100vw, 700px" width="1200" height="675" loading="lazy" alt="Bytom Premium Residence, widok wieczorny z góry"></figure>
+    <figure><img src="img/bytom-5-640.webp" srcset="img/bytom-5-640.webp 640w, img/bytom-5-1200.webp 1200w" sizes="(max-width:1080px) 100vw, 700px" width="1200" height="675" loading="lazy" alt="Bytom Premium Residence, widok od ulicy Łużyckiej"></figure>
+   </div>
+   <div class="pasek"><span id="licz">1 / 5</span><div class="kropki" role="group" aria-label="Zdjęcia inwestycji"></div></div>
+  </div>
+  <div>
+   <h2 id="h-bytom">Bytom Premium Residence</h2>
+   <p class="wstep">Dwa najwyższe budynki w Bytomiu, po 17 kondygnacji i 55 m wysokości, na obrzeżach śródmieścia, przy parku im. Franciszka Kachla.</p>
+   <dl class="dane">
+    <div><dt>Działka</dt><dd>11 214,50 m², użytkowanie wieczyste</dd></div>
+    <div><dt>Mieszkania</dt><dd>339</dd></div>
+    <div><dt>Usługi</dt><dd>ok. 645 m², 5 lokali</dd></div>
+    <div><dt>PUM łącznie z usługami i loggiami</dt><dd>ok. 18 000 m²</dd></div>
+    <div><dt>Miejsca postojowe</dt><dd>324 w garażu, 30 na zewnątrz</dd></div>
+    <div><dt>Pozwolenie na budowę</dt><dd>2026</dd></div>
+   </dl>
+   <a class="btn btn-c" href="#kontakt">Poproś o teaser inwestycji</a>
+  </div>
+ </div>
+</section>
+
+<div class="pas"><img src="img/pas-1600.webp" srcset="img/pas-900.webp 900w, img/pas-1600.webp 1600w, img/pas-2560.webp 2560w" sizes="100vw" width="2560" height="1440" loading="lazy" alt="Łódź Wólczańska Apartments, podwórze między odnowionymi kamienicami a nowym budynkiem"><p>Łódź Wólczańska Apartments: nowa zabudowa wpisana w ceglane kamienice.</p></div>
+
+<section class="grunty" id="grunty" aria-labelledby="h-grunty">
+ <div class="tekst">
+  <h2 id="h-grunty">Bo grunt to podstawa</h2>
+  <p class="wstep">Szukamy gruntów pod nowe inwestycje: od terenów poprzemysłowych i wymagających przekształceń, przez grunty rolne, po działki komercyjne.</p>
+  <p>Analizę potencjału, planowanie, decyzje i przygotowanie terenu bierzemy na siebie. Właściciel sprzedaje nieruchomość w uporządkowany, bezpieczny i przejrzysty sposób, a każdy projekt analizujemy indywidualnie.</p>
+  <div class="dwie">
+   <div><h3>Czego szukamy</h3><ul class="lista">
+    <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="currentColor"/></svg>grunty pod zabudowę wielorodzinną i jednorodzinną</li>
+    <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="currentColor"/></svg>grunty komercyjne: biurowce, parki handlowe, galerie</li>
+    <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="currentColor"/></svg>hotele, aparthotele, condo-hotele i najem instytucjonalny (PRS)</li>
+    <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="currentColor"/></svg>domy senioralne, logistyka i przemysł</li>
+   </ul></div>
+   <div><h3>Jak współpracujemy</h3><ul class="lista">
+    <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="currentColor"/></svg>zakup bezpośredni</li>
+    <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="currentColor"/></svg>sprzedaż etapowa</li>
+    <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="currentColor"/></svg>wspólne przedsięwzięcie (JV): finansujemy całość i wspólnie sprzedajemy</li>
+   </ul></div>
+  </div>
+  <a class="btn btn-c" href="#kontakt">Zaproponuj grunt</a>
+ </div>
+ <div class="fot"><img src="img/grunt-1200.webp" srcset="img/grunt-640.webp 640w, img/grunt-1200.webp 1200w, img/grunt-1600.webp 1600w, img/grunt-2560.webp 2560w" sizes="(max-width:1080px) 100vw, (max-width:1500px) 1300px, (max-width:2000px) 1700px, 2560px" width="2560" height="1440" loading="lazy" alt="Widok z lotu ptaka na kwartał zabudowy przy ul. Wólczańskiej w Łodzi"></div>
+</section>
+
+<section class="inwestorzy" id="inwestorzy" aria-labelledby="h-inwestorzy">
+ <div class="wrap uklad">
+  <div>
+   <h2 id="h-inwestorzy">Partnerstwo, kapitał, skala</h2>
+   <p class="wstep">Łączymy doświadczenie operacyjne, dostęp do projektów off-market i elastyczne struktury kapitałowe. Każde przedsięwzięcie poprzedza pełne due diligence: prawne, planistyczne, finansowe i techniczne.</p>
+   <p>Zapraszamy inwestorów prywatnych, przedsiębiorców szukających dywersyfikacji kapitału oraz partnerów strategicznych i branżowych. Nie oferujemy masowych produktów inwestycyjnych, każdą współpracę budujemy indywidualnie.</p>
+   <blockquote class="cytat">Kapitał pracuje najlepiej tam, gdzie spotyka się z doświadczeniem, kontrolą i realną wartością aktywów.<cite>Nasza filozofia</cite></blockquote>
+  </div>
+  <div>
+   <div class="blok"><h3>Dostęp do projektów, których nie ma na rynku</h3><p>Pracujemy bezpośrednio z właścicielami gruntów, samorządami, deweloperami i instytucjami, bez przetargów i presji cenowej.</p></div>
+   <div class="blok"><h3>Formy udziału</h3><ul class="lista">
+    <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="currentColor"/></svg>udział kapitałowy w spółkach projektowych (SPV)</li>
+    <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="currentColor"/></svg>wspólne przedsięwzięcia deweloperskie (JV)</li>
+    <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="currentColor"/></svg>wejście na etapie gruntu, pozwolenia na budowę lub realizacji</li>
+    <li><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="currentColor"/></svg>finansowanie projektów i struktury dopasowane do profilu ryzyka</li>
+   </ul></div>
+   <div class="blok"><h3>Przejrzystość i kontrola</h3><p>Każdy projekt ma określony harmonogram, budżet, strategię wyjścia i prognozowaną stopę zwrotu. Inwestorzy mają dostęp do pełnej dokumentacji i bieżących raportów z postępów.</p></div>
+   <p style="margin-top:28px"><a class="btn btn-z" href="#kontakt">Porozmawiajmy o współpracy</a></p>
+  </div>
+ </div>
+</section>
+
+<section class="firma" id="o-nas" aria-labelledby="h-firma">
+ <div class="wrap uklad">
+  <div><h2 id="h-firma">Własny kapitał i know-how</h2><p>Wywodzimy się z grupy kapitałowej OXYLINE i działamy jako jej niezależne ramię operacyjne. Nie jesteśmy holdingiem ani konsorcjum, tylko elastyczną siecią spółek celowych, które razem prowadzą przemyślane projekty. Zespół pracuje w całej Polsce.</p></div>
+  <div><h3>Siedziba</h3><p>ul. Marsz. Józefa Piłsudskiego 34<br>95-200 Pabianice</p></div>
+  <div><h3>Oddział Warszawa</h3><p>ul. Złota 59<br>00-120 Warszawa</p></div>
+ </div>
+</section>
+
+<section class="kontakt-s" id="kontakt" aria-labelledby="h-kontakt">
+ <div class="wrap uklad">
+  <div>
+   <h2 id="h-kontakt">Masz grunt albo kapitał? Porozmawiajmy</h2>
+   <p class="wstep">Napisz kilka słów o nieruchomości lub o tym, jakiej współpracy szukasz. Odpowiemy po zapoznaniu się z informacjami.</p>
+   <form id="form" novalidate>
+    <div><label for="f-imie">Imię i nazwisko</label><input id="f-imie" name="imie" autocomplete="name"></div>
+    <div><label for="f-kontakt">Telefon lub e-mail</label><input id="f-kontakt" name="kontakt" autocomplete="email"></div>
+    <div><label for="f-sprawa">Sprawa</label><select id="f-sprawa" name="sprawa"><option>Mam grunt na sprzedaż</option><option>Chcę zainwestować</option><option>Inna sprawa</option></select></div>
+    <div><label for="f-lok">Lokalizacja działki</label><input id="f-lok" name="lokalizacja" placeholder="np. Łódź, Polesie"></div>
+    <div class="pelne"><label for="f-tresc">Wiadomość</label><textarea id="f-tresc" name="tresc" placeholder="Powierzchnia, przeznaczenie w planie, stan prawny..."></textarea></div>
+    <div class="pelne"><button class="btn btn-z" type="submit">Wyślij wiadomość</button></div>
+    <p class="uwaga" id="f-info" role="status">W tym podglądzie formularz niczego nie wysyła.</p>
+   </form>
+  </div>
+  <div class="dane-k">
+   <h3>GIANT Development Group Sp. z o.o.</h3>
+   <div class="rz"><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M1 7.5h22M9 1 7.5 7.5 12 21l4.5-13.5L15 1" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg><div>Telefon<br><a href="tel:+48532551913">+48 532 551 913</a></div></div>
+   <div class="rz"><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M1 7.5h22M9 1 7.5 7.5 12 21l4.5-13.5L15 1" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg><div>E-mail<br><a href="mailto:kontakt@gdgroup.pl">kontakt@gdgroup.pl</a></div></div>
+   <div class="rz"><svg class="gem" viewBox="0 0 24 22" aria-hidden="true"><path d="M6 1h12l5 6.5L12 21 1 7.5z" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M1 7.5h22M9 1 7.5 7.5 12 21l4.5-13.5L15 1" fill="none" stroke="currentColor" stroke-width="1.1" stroke-linejoin="round"/></svg><div>ul. Marsz. Józefa Piłsudskiego 34, 95-200 Pabianice<br>Oddział: ul. Złota 59, 00-120 Warszawa</div></div>
+   <div class="mapa"><iframe src="https://maps.google.com/maps?q=ul.+Pi%C5%82sudskiego+34,+95-200+Pabianice&amp;z=15&amp;output=embed" title="Mapa: GIANT Development Group, Pabianice" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer class="stopka">
+ <div class="wrap">
+  <div class="uklad">
+   <div><span class="logo"><svg aria-hidden="true" focusable="false"  viewBox="0 0 660 168" xmlns="http://www.w3.org/2000/svg" style="fill-rule:evenodd;clip-rule:evenodd;stroke-linejoin:round;stroke-miterlimit:2;"> <g transform="matrix(1,0,0,1,-260.601,-506.671)"> <g transform="matrix(1.14919,0,0,1.14919,-145.753,-21.7639)"> <g transform="matrix(0.0835863,0,0,0.0835863,269.907,344.711)"> <path d="M2208.61,2279.46L2208.61,3123.24L2054.52,2969.18L1930.56,2845.21L1802.62,2717.25L1787.69,2702.33L1659.74,2574.38L1001.28,1915.93L1295.23,1621.99L1302.66,1614.55L1423.18,1494.05L1551.14,1621.99L1423.18,1749.95L1257.19,1915.93L2054.52,2713.26L2054.52,2381.29L1848.93,2175.7L1766.07,2258.56L1657.13,2149.62L1739.99,2066.75L1867.95,1938.8L1976.89,2047.74L2102.53,2173.39L2208.61,2279.46ZM2987.06,1378.35L3035.27,1426.57L2902.53,1559.32L2375.63,2086.23L2332.37,2129.48L2247.67,2214.19L1920.13,1886.63L1592.81,1559.32L1461.27,1427.78L1510.68,1378.35L2987.06,1378.35ZM2247.67,1958.27L2646.62,1559.32L1848.72,1559.32L2048.08,1758.68L2157.02,1867.62L2247.67,1958.27ZM3500.51,1911.88L3332.24,2080.15L3076.33,2080.15L3244.61,1911.88L3081.3,1748.58L2549.6,2280.28L2448.24,2381.64L2448.24,2708.24L2573.91,2582.56L2584.96,2571.53L2712.9,2443.58L2775.77,2380.72L2693.93,2298.88L2802.88,2189.94L3012.67,2399.73L2840.86,2571.53L2712.9,2699.49L2701.88,2710.52L2448.24,2964.15L2294.18,3118.22L2294.18,2279.83L2393.32,2180.68L2953.36,1620.64L3081.3,1492.68L3209.26,1620.64L3500.51,1911.88Z" style="fill:#D4AF37;"/> </g> <g transform="matrix(0.884212,0,0,0.884212,30.06,-326.452)"> <g transform="matrix(50,0,0,50,640.237,930.2)"> <path d="M0.264,0.011C0.187,0.011 0.132,-0.013 0.099,-0.061C0.065,-0.108 0.048,-0.177 0.048,-0.267L0.048,-0.539C0.048,-0.632 0.065,-0.702 0.1,-0.749C0.135,-0.796 0.194,-0.819 0.279,-0.819C0.359,-0.819 0.416,-0.799 0.451,-0.76C0.486,-0.72 0.503,-0.661 0.503,-0.583L0.503,-0.541L0.362,-0.541L0.362,-0.587C0.362,-0.616 0.36,-0.64 0.357,-0.657C0.353,-0.674 0.345,-0.688 0.334,-0.697C0.322,-0.706 0.304,-0.711 0.281,-0.711C0.256,-0.711 0.238,-0.705 0.226,-0.693C0.214,-0.681 0.206,-0.666 0.203,-0.647C0.199,-0.628 0.197,-0.604 0.197,-0.574L0.197,-0.235C0.197,-0.189 0.203,-0.155 0.216,-0.132C0.228,-0.109 0.251,-0.098 0.285,-0.098C0.318,-0.098 0.341,-0.11 0.355,-0.134C0.368,-0.158 0.374,-0.194 0.374,-0.242L0.374,-0.318L0.287,-0.318L0.287,-0.411L0.507,-0.411L0.507,-0L0.411,-0L0.401,-0.079C0.376,-0.019 0.33,0.011 0.264,0.011Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,678.187,930.2)"> <rect x="0.065" y="-0.81" width="0.146" height="0.81" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,701.937,930.2)"> <path d="M0.182,-0.81L0.34,-0.81L0.502,-0L0.365,-0L0.333,-0.187L0.192,-0.187L0.159,-0L0.02,-0L0.182,-0.81ZM0.317,-0.281L0.262,-0.621L0.207,-0.281L0.317,-0.281Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,738.037,930.2)"> <path d="M0.061,-0.81L0.164,-0.81L0.361,-0.348L0.361,-0.81L0.483,-0.81L0.483,-0L0.385,-0L0.187,-0.484L0.187,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,775.287,930.2)"> <path d="M0.142,-0.701L0.013,-0.701L0.013,-0.81L0.416,-0.81L0.416,-0.701L0.29,-0.701L0.29,-0L0.142,-0L0.142,-0.701Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,640.237,991.999)"> <path d="M0.061,-0.81L0.252,-0.81C0.317,-0.81 0.369,-0.801 0.406,-0.784C0.443,-0.766 0.47,-0.739 0.486,-0.703C0.501,-0.666 0.509,-0.618 0.509,-0.558L0.509,-0.263C0.509,-0.202 0.501,-0.152 0.486,-0.114C0.47,-0.076 0.444,-0.048 0.407,-0.029C0.37,-0.01 0.321,-0 0.258,-0L0.061,-0L0.061,-0.81ZM0.254,-0.103C0.287,-0.103 0.31,-0.109 0.325,-0.12C0.34,-0.131 0.349,-0.147 0.353,-0.168C0.357,-0.188 0.359,-0.218 0.359,-0.258L0.359,-0.568C0.359,-0.604 0.357,-0.631 0.352,-0.65C0.347,-0.669 0.338,-0.683 0.323,-0.692C0.308,-0.7 0.284,-0.705 0.252,-0.705L0.208,-0.705L0.208,-0.103L0.254,-0.103Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,678.087,991.999)"> <path d="M0.061,-0.81L0.401,-0.81L0.401,-0.706L0.208,-0.706L0.208,-0.473L0.36,-0.473L0.36,-0.37L0.208,-0.37L0.208,-0.101L0.403,-0.101L0.403,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,709.487,991.999)"> <path d="M0.023,-0.81L0.153,-0.81L0.26,-0.237L0.361,-0.81L0.494,-0.81L0.331,-0L0.186,-0L0.023,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,745.287,991.999)"> <path d="M0.061,-0.81L0.401,-0.81L0.401,-0.706L0.208,-0.706L0.208,-0.473L0.36,-0.473L0.36,-0.37L0.208,-0.37L0.208,-0.101L0.403,-0.101L0.403,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,776.687,991.999)"> <path d="M0.061,-0.81L0.208,-0.81L0.208,-0.101L0.405,-0.101L0.405,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,807.237,991.999)"> <path d="M0.282,0.011C0.198,0.011 0.138,-0.012 0.102,-0.057C0.066,-0.101 0.048,-0.167 0.048,-0.254L0.048,-0.558C0.048,-0.644 0.066,-0.709 0.102,-0.753C0.138,-0.797 0.198,-0.819 0.282,-0.819C0.365,-0.819 0.425,-0.797 0.461,-0.753C0.497,-0.709 0.515,-0.644 0.515,-0.558L0.515,-0.254C0.515,-0.168 0.497,-0.102 0.461,-0.057C0.424,-0.012 0.365,0.011 0.282,0.011ZM0.282,-0.098C0.315,-0.098 0.337,-0.108 0.348,-0.129C0.359,-0.15 0.365,-0.18 0.365,-0.219L0.365,-0.592C0.365,-0.631 0.36,-0.661 0.349,-0.681C0.338,-0.701 0.315,-0.711 0.282,-0.711C0.249,-0.711 0.226,-0.701 0.215,-0.681C0.204,-0.66 0.198,-0.631 0.198,-0.592L0.198,-0.219C0.198,-0.18 0.204,-0.15 0.215,-0.129C0.226,-0.108 0.249,-0.098 0.282,-0.098Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,845.387,991.999)"> <path d="M0.061,-0.81L0.299,-0.81C0.437,-0.81 0.506,-0.733 0.506,-0.58C0.506,-0.433 0.434,-0.36 0.289,-0.36L0.208,-0.36L0.208,-0L0.061,-0L0.061,-0.81ZM0.265,-0.464C0.305,-0.464 0.332,-0.472 0.346,-0.49C0.36,-0.507 0.367,-0.537 0.367,-0.581C0.367,-0.613 0.365,-0.638 0.36,-0.655C0.355,-0.672 0.346,-0.684 0.332,-0.693C0.317,-0.702 0.295,-0.706 0.265,-0.706L0.208,-0.706L0.208,-0.464L0.265,-0.464Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,881.737,991.999)"> <path d="M0.073,-0.81L0.226,-0.81L0.341,-0.249L0.46,-0.81L0.609,-0.81L0.624,-0L0.514,-0L0.502,-0.563L0.387,-0L0.298,-0L0.181,-0.565L0.17,-0L0.059,-0L0.073,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,925.887,991.999)"> <path d="M0.061,-0.81L0.401,-0.81L0.401,-0.706L0.208,-0.706L0.208,-0.473L0.36,-0.473L0.36,-0.37L0.208,-0.37L0.208,-0.101L0.403,-0.101L0.403,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,957.287,991.999)"> <path d="M0.061,-0.81L0.164,-0.81L0.361,-0.348L0.361,-0.81L0.483,-0.81L0.483,-0L0.385,-0L0.187,-0.484L0.187,-0L0.061,-0L0.061,-0.81Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,994.537,991.999)"> <path d="M0.142,-0.701L0.013,-0.701L0.013,-0.81L0.416,-0.81L0.416,-0.701L0.29,-0.701L0.29,-0L0.142,-0L0.142,-0.701Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,640.237,1053.8)"> <path d="M0.264,0.011C0.187,0.011 0.132,-0.013 0.099,-0.061C0.065,-0.108 0.048,-0.177 0.048,-0.267L0.048,-0.539C0.048,-0.632 0.065,-0.702 0.1,-0.749C0.135,-0.796 0.194,-0.819 0.279,-0.819C0.359,-0.819 0.416,-0.799 0.451,-0.76C0.486,-0.72 0.503,-0.661 0.503,-0.583L0.503,-0.541L0.362,-0.541L0.362,-0.587C0.362,-0.616 0.36,-0.64 0.357,-0.657C0.353,-0.674 0.345,-0.688 0.334,-0.697C0.322,-0.706 0.304,-0.711 0.281,-0.711C0.256,-0.711 0.238,-0.705 0.226,-0.693C0.214,-0.681 0.206,-0.666 0.203,-0.647C0.199,-0.628 0.197,-0.604 0.197,-0.574L0.197,-0.235C0.197,-0.189 0.203,-0.155 0.216,-0.132C0.228,-0.109 0.251,-0.098 0.285,-0.098C0.318,-0.098 0.341,-0.11 0.355,-0.134C0.368,-0.158 0.374,-0.194 0.374,-0.242L0.374,-0.318L0.287,-0.318L0.287,-0.411L0.507,-0.411L0.507,-0L0.411,-0L0.401,-0.079C0.376,-0.019 0.33,0.011 0.264,0.011Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,678.187,1053.8)"> <path d="M0.061,-0.81L0.256,-0.81C0.341,-0.81 0.405,-0.794 0.447,-0.762C0.489,-0.729 0.51,-0.674 0.51,-0.595C0.51,-0.544 0.503,-0.502 0.488,-0.47C0.472,-0.437 0.447,-0.414 0.41,-0.399L0.523,-0L0.375,-0L0.278,-0.371L0.208,-0.371L0.208,-0L0.061,-0L0.061,-0.81ZM0.255,-0.463C0.297,-0.463 0.327,-0.473 0.345,-0.492C0.362,-0.511 0.371,-0.543 0.371,-0.587C0.371,-0.63 0.363,-0.661 0.348,-0.68C0.332,-0.699 0.304,-0.709 0.263,-0.709L0.208,-0.709L0.208,-0.463L0.255,-0.463Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,716.037,1053.8)"> <path d="M0.282,0.011C0.198,0.011 0.138,-0.012 0.102,-0.057C0.066,-0.101 0.048,-0.167 0.048,-0.254L0.048,-0.558C0.048,-0.644 0.066,-0.709 0.102,-0.753C0.138,-0.797 0.198,-0.819 0.282,-0.819C0.365,-0.819 0.425,-0.797 0.461,-0.753C0.497,-0.709 0.515,-0.644 0.515,-0.558L0.515,-0.254C0.515,-0.168 0.497,-0.102 0.461,-0.057C0.424,-0.012 0.365,0.011 0.282,0.011ZM0.282,-0.098C0.315,-0.098 0.337,-0.108 0.348,-0.129C0.359,-0.15 0.365,-0.18 0.365,-0.219L0.365,-0.592C0.365,-0.631 0.36,-0.661 0.349,-0.681C0.338,-0.701 0.315,-0.711 0.282,-0.711C0.249,-0.711 0.226,-0.701 0.215,-0.681C0.204,-0.66 0.198,-0.631 0.198,-0.592L0.198,-0.219C0.198,-0.18 0.204,-0.15 0.215,-0.129C0.226,-0.108 0.249,-0.098 0.282,-0.098Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,754.187,1053.8)"> <path d="M0.283,0.011C0.224,0.011 0.178,0 0.145,-0.021C0.112,-0.042 0.088,-0.073 0.075,-0.112C0.062,-0.151 0.055,-0.201 0.055,-0.262L0.055,-0.81L0.199,-0.81L0.199,-0.245C0.199,-0.198 0.205,-0.162 0.216,-0.137C0.227,-0.112 0.249,-0.099 0.283,-0.099C0.318,-0.099 0.341,-0.112 0.352,-0.137C0.363,-0.162 0.368,-0.198 0.368,-0.245L0.368,-0.81L0.511,-0.81L0.511,-0.262C0.511,-0.202 0.504,-0.152 0.491,-0.113C0.478,-0.073 0.454,-0.042 0.421,-0.021C0.388,0 0.342,0.011 0.283,0.011Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> <g transform="matrix(50,0,0,50,792.487,1053.8)"> <path d="M0.061,-0.81L0.299,-0.81C0.437,-0.81 0.506,-0.733 0.506,-0.58C0.506,-0.433 0.434,-0.36 0.289,-0.36L0.208,-0.36L0.208,-0L0.061,-0L0.061,-0.81ZM0.265,-0.464C0.305,-0.464 0.332,-0.472 0.346,-0.49C0.36,-0.507 0.367,-0.537 0.367,-0.581C0.367,-0.613 0.365,-0.638 0.36,-0.655C0.355,-0.672 0.346,-0.684 0.332,-0.693C0.317,-0.702 0.295,-0.706 0.265,-0.706L0.208,-0.706L0.208,-0.464L0.265,-0.464Z" style="fill:currentColor;fill-rule:nonzero;"/> </g> </g> </g> </g> </svg></span><p>Land development i inwestycje deweloperskie w całej Polsce.</p></div>
+   <div><h3>Strona</h3><ul><li><a href="#inwestycje">Inwestycje</a></li><li><a href="#grunty">Grunty</a></li><li><a href="#inwestorzy">Inwestorzy</a></li><li><a href="#o-nas">O nas</a></li></ul></div>
+   <div><h3>Kontakt</h3><ul><li><a href="tel:+48532551913">+48 532 551 913</a></li><li><a href="mailto:kontakt@gdgroup.pl">kontakt@gdgroup.pl</a></li><li>Pabianice · Warszawa</li></ul></div>
+   <div><h3>Dane spółki</h3><ul><li>NIP 7312091708</li><li>REGON 541682325</li><li>KRS 0001172049</li></ul></div>
+  </div>
+  <div class="dol"><span>© 2026 GIANT Development Group Sp. z o.o.</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=gdgroup.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a></div>
+ </div>
+</footer>
+
+<script>
+(function(){
+ var top=document.getElementById('top'),b=top.querySelector('.burger');
+ function sc(){top.classList.toggle('s',scrollY>40)}sc();addEventListener('scroll',sc,{passive:true});
+ b.addEventListener('click',function(){var o=top.classList.toggle('otw');b.setAttribute('aria-expanded',o)});
+ top.querySelectorAll('.nav a').forEach(function(a){a.addEventListener('click',function(){top.classList.remove('otw');b.setAttribute('aria-expanded','false')})});
+ function drag(el){var x0,s0,d=false,m=false;
+  el.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;d=true;m=false;x0=e.clientX;s0=el.scrollLeft});
+  addEventListener('pointermove',function(e){if(!d)return;var dx=e.clientX-x0;if(Math.abs(dx)>4){m=true;el.classList.add('drag')}el.scrollLeft=s0-dx});
+  addEventListener('pointerup',function(){if(!d)return;d=false;el.classList.remove('drag');if(m){var w=el.firstElementChild.getBoundingClientRect().width+22;el.scrollTo({left:Math.round(el.scrollLeft/w)*w,behavior:'smooth'})}});
+  el.addEventListener('dragstart',function(e){e.preventDefault()});}
+ var tor=document.getElementById('tor');drag(tor);
+ document.querySelectorAll('.strz button').forEach(function(x){x.addEventListener('click',function(){var w=tor.firstElementChild.getBoundingClientRect().width+22;tor.scrollBy({left:w*+x.dataset.kier,behavior:'smooth'})})});
+ var g=document.querySelector('#gal .tor2'),kr=document.querySelector('#gal .kropki'),lc=document.getElementById('licz'),n=g.children.length;drag(g);
+ for(var i=0;i<n;i++){(function(i){var k=document.createElement('button');k.type='button';k.setAttribute('aria-label','Zdjęcie '+(i+1));k.addEventListener('click',function(){g.scrollTo({left:i*g.clientWidth,behavior:'smooth'})});kr.appendChild(k)})(i)}
+ function ak(){var i=Math.round(g.scrollLeft/g.clientWidth);lc.textContent=(i+1)+' / '+n;[].forEach.call(kr.children,function(k,j){k.setAttribute('aria-current',j===i)})}ak();g.addEventListener('scroll',ak,{passive:true});
+ document.getElementById('form').addEventListener('submit',function(e){e.preventDefault();document.getElementById('f-info').textContent='To podgląd strony: na docelowej stronie wiadomość trafi na kontakt@gdgroup.pl.'});
+})();
+</script>
+</body>
+</html>
